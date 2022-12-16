@@ -15,5 +15,6 @@
     "Tracef",
     "Unconfigured",
     "Warnf"
-  ]
+  ],
+ "editor.inlayHints.fontSize" "editor.experimental.pasteActions.enabled": true
 }

@@ -1,4 +1,4 @@
-FROM golang:1.21-bullseye AS builder
+FROM golang:1.22-bullseye AS builder
 WORKDIR /ethconnect
 RUN apt-get update -y \
     && apt-get install -y build-essential git \

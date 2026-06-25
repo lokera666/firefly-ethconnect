@@ -21,10 +21,10 @@ import (
 	"sync"
 
 	"github.com/IBM/sarama"
-	"github.com/hyperledger/firefly-ethconnect/internal/auth"
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
-	"github.com/hyperledger/firefly-ethconnect/internal/kafka"
-	"github.com/hyperledger/firefly-ethconnect/internal/messages"
+	"github.com/hyperledger-firefly/ethconnect/internal/auth"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/kafka"
+	"github.com/hyperledger-firefly/ethconnect/internal/messages"
 	log "github.com/sirupsen/logrus"
 )
 

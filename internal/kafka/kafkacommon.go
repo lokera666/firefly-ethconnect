@@ -25,8 +25,8 @@ import (
 	"time"
 
 	"github.com/IBM/sarama"
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
-	"github.com/hyperledger/firefly-ethconnect/internal/utils"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/utils"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

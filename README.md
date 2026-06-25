@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/hyperledger/firefly-ethconnect/branch/main/graph/badge.svg?token=nO6ihSAzpV)](https://codecov.io/gh/hyperledger/firefly-ethconnect) [![Go Report Card](https://goreportcard.com/badge/github.com/hyperledger/firefly-ethconnect)](https://goreportcard.com/report/github.com/hyperledger/firefly-ethconnect)
+[![codecov](https://codecov.io/gh/hyperledger-firefly/ethconnect/branch/main/graph/badge.svg?token=nO6ihSAzpV)](https://codecov.io/gh/hyperledger-firefly/ethconnect) [![Go Report Card](https://goreportcard.com/badge/github.com/hyperledger-firefly/ethconnect)](https://goreportcard.com/report/github.com/hyperledger-firefly/ethconnect)
 
 ## EthConnect - Hyperledger FireFly connector for Ethereum networks
 
@@ -7,7 +7,7 @@ for Ethereum networks.
 
 > For new projects, you are recommended to use the full Hyperledger FireFly
 > project stack - and consider using the new\
-> [EVMConnect](https://github.com/hyperledger/firefly-evmconnect) connector
+> [EVMConnect](https://github.com/hyperledger-firefly/evmconnect) connector
 > for connectivity to your EVM based chains (whether public, or private).
 
 Since creation in 2018 a large amount of function has evolved through
@@ -33,7 +33,7 @@ For example to allow connectivity from an Enterprise Service Bus (ESB) or other
 Enterprise Application Integration (EAI) tier, or applications running in a
 Java EE Application Server.
 
-[![hyperledger/firefly-ethconnect](ethconnect.png)](ethconnect.pdf)
+[![hyperledger-firefly/ethconnect](ethconnect.png)](ethconnect.pdf)
 
 ## License
 
@@ -113,7 +113,7 @@ contracts and sending transactions, because it is:
 
 Instead thick client libraries such as [web3.js](https://github.com/ethereum/web3.js/), [web3j](https://github.com/web3j/web3j), [web3.py](https://github.com/ethereum/web3.py), [Nethereum](https://github.com/Nethereum/Nethereum) and [ethjs](https://github.com/ethjs/ethjs) are used to submit transactions.
 
-These thick client libraries perform many of the same functions as hyperledger/firefly-ethconnect, simplifying submission of transactions, receipt checking,
+These thick client libraries perform many of the same functions as hyperledger-firefly/ethconnect, simplifying submission of transactions, receipt checking,
 nonce management etc.
 
 In the modern world of Microservice architectures, having a simple, efficient
@@ -141,7 +141,7 @@ Providing a Messaging layer with at-least-once delivery and message ordering, al
 
 Applications that have their own state stores are able to communicate over Messaging / Kafka with simple JSON payloads to stream transactions into a scalable set of Ethereum nodes, and process the replies as they occur. The application can scale horizontally. Applications can also be decoupled from the Ethereum network with an integration technology like an Enterprise Service Bus (ESB).
 
-When spikes in workload occur that create a large queue of transactions that need to be fed into the Ethereum network at a lower rate, the hyperledger/firefly-ethconnect bridge feeds them in at an optimal rate.
+When spikes in workload occur that create a large queue of transactions that need to be fed into the Ethereum network at a lower rate, the hyperledger-firefly/ethconnect bridge feeds them in at an optimal rate.
 
 ### Ethereum Webhooks and the REST Receipt Store (MongoDB)
 
@@ -172,17 +172,17 @@ A capped collection can be used in MongoDB to limit the storage. For example to 
 The transaction pooling/execution logic within an Ethereum node is based upon the concept of a `nonce`, which must be incremented exactly once each time a transaction is submitted from the same Ethereum address. There can be no gaps in the nonce values, or messages build up in the `queued transaction` pool waiting for the gap to be filled (which is the responsibility of the
 sender to fill). This allows for deterministic ordering of transactions sent by the same sender.
 
-The management of this `nonce` pushes complexity back to the application tier - especially for horizontally scaled Enterprise applications sending many transactions using the same sender. By using an ordered Messaging stream to submit messages into the Ethereum network, many applications are able to delegate this complexity to hyperledger/firefly-ethconnect.
+The management of this `nonce` pushes complexity back to the application tier - especially for horizontally scaled Enterprise applications sending many transactions using the same sender. By using an ordered Messaging stream to submit messages into the Ethereum network, many applications are able to delegate this complexity to hyperledger-firefly/ethconnect.
 
-The hyperledger/firefly-ethconnect bridge contains all the logic necessary to communicate with the node to determine the next nonce, and also to cope with multiple requests being in flight within the same block, for the same sender (including [with IBFT](https://github.com/ethereum/EIPs/issues/650#issuecomment-360085474)).
+The hyperledger-firefly/ethconnect bridge contains all the logic necessary to communicate with the node to determine the next nonce, and also to cope with multiple requests being in flight within the same block, for the same sender (including [with IBFT](https://github.com/ethereum/EIPs/issues/650#issuecomment-360085474)).
 
 When using the bridge, an application can submit simple YAML/JSON formatted transactions
 in a highly parallel way across many instances using the same sender address to the bridge
 over HTTPS/Kafka _without_ a nonce. Then through ordered message delivery and nonce management
-code within the hyperledger/firefly-ethconnect bridge it will be assigned a nonce and submitted
+code within the hyperledger-firefly/ethconnect bridge it will be assigned a nonce and submitted
 into the Ethereum node. The nonce assigned is returned by the bridge in the reply.
 
-If a sender needs to achieve exactly-once delivery of transactions (vs. at-least-once) it is still necessary to allocate the nonce within the application and pass it into hyperledger/firefly-ethconnect in the payload.  This allows the sender to control allocation of nonces using its internal state store / locking.
+If a sender needs to achieve exactly-once delivery of transactions (vs. at-least-once) it is still necessary to allocate the nonce within the application and pass it into hyperledger-firefly/ethconnect in the payload.  This allows the sender to control allocation of nonces using its internal state store / locking.
 
 > There's a good summary of at-least-once vs. exactly-once semantics in the [Akka documentation](https://doc.akka.io/docs/akka/current/general/message-delivery-reliability.html?language=scala#discussion-what-does-at-most-once-mean-)
 
@@ -209,12 +209,12 @@ trivially. Some examples as follows:
 ## Why Kafka?
 
 We selected Kafka as the first Messaging platform, because Kafka has message ordering and scale characteristics that are ideally suited to the Ethereum transaction model:
-- Transactions can be sprayed across partitions, while retaining order of the transactions for a particular sender. Allowing independent and dynamic scaling of the application, hyperledger/firefly-ethconnect bridge and Go-ethereum node components.
+- Transactions can be sprayed across partitions, while retaining order of the transactions for a particular sender. Allowing independent and dynamic scaling of the application, hyperledger-firefly/ethconnect bridge and Go-ethereum node components.
 - The modern replication based cloud-native and continuously available architecture is ideal for Hyperledger projects, and is likely to be a good fit for the modern Microservice architectures that are common in Blockchain projects.
 
 ## Topics
 
-[![hyperledger/firefly-ethconnect - Topics](ethconnect_topics.png)](ethconnect.pdf)
+[![hyperledger-firefly/ethconnect - Topics](ethconnect_topics.png)](ethconnect.pdf)
 
 The topic usage is very simple:
 - One topic delivering messages into the bridge
@@ -305,7 +305,7 @@ blockchain.
 Requires [Go 1.11](https://golang.org/dl/) or later to install with `go get`
 
 ```sh
-go get github.com/hyperledger/firefly-ethconnect
+go get github.com/hyperledger-firefly/ethconnect
 ```
 
 ## Development environment

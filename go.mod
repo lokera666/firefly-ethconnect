@@ -1,4 +1,4 @@
-module github.com/hyperledger/firefly-ethconnect
+module github.com/hyperledger-firefly/ethconnect
 
 go 1.22
 

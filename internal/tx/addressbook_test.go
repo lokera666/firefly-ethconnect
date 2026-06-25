@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/eth"
+	"github.com/hyperledger-firefly/ethconnect/internal/eth"
 	"github.com/julienschmidt/httprouter"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"

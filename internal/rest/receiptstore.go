@@ -22,12 +22,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/auth"
-	"github.com/hyperledger/firefly-ethconnect/internal/contractgateway"
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
-	"github.com/hyperledger/firefly-ethconnect/internal/messages"
-	"github.com/hyperledger/firefly-ethconnect/internal/receipts"
-	"github.com/hyperledger/firefly-ethconnect/internal/utils"
+	"github.com/hyperledger-firefly/ethconnect/internal/auth"
+	"github.com/hyperledger-firefly/ethconnect/internal/contractgateway"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/messages"
+	"github.com/hyperledger-firefly/ethconnect/internal/receipts"
+	"github.com/hyperledger-firefly/ethconnect/internal/utils"
 	"github.com/julienschmidt/httprouter"
 	log "github.com/sirupsen/logrus"
 )

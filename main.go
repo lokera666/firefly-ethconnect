@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hyperledger/firefly-ethconnect/cmd"
+	"github.com/hyperledger-firefly/ethconnect/cmd"
 )
 
 var buildDate, buildVersion string // Set by ldflags

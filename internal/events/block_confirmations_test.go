@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/ethbind"
-	"github.com/hyperledger/firefly-ethconnect/mocks/ethmocks"
+	"github.com/hyperledger-firefly/ethconnect/internal/ethbind"
+	"github.com/hyperledger-firefly/ethconnect/mocks/ethmocks"
 	ethbinding "github.com/kaleido-io/ethbinding/pkg"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"

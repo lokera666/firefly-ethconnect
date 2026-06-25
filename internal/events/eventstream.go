@@ -25,10 +25,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/auth"
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
-	"github.com/hyperledger/firefly-ethconnect/internal/messages"
-	"github.com/hyperledger/firefly-ethconnect/internal/ws"
+	"github.com/hyperledger-firefly/ethconnect/internal/auth"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/messages"
+	"github.com/hyperledger-firefly/ethconnect/internal/ws"
 	ethbinding "github.com/kaleido-io/ethbinding/pkg"
 
 	lru "github.com/hashicorp/golang-lru"

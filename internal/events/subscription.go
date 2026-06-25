@@ -20,11 +20,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/contractregistry"
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
-	"github.com/hyperledger/firefly-ethconnect/internal/eth"
-	"github.com/hyperledger/firefly-ethconnect/internal/ethbind"
-	"github.com/hyperledger/firefly-ethconnect/internal/messages"
+	"github.com/hyperledger-firefly/ethconnect/internal/contractregistry"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/eth"
+	"github.com/hyperledger-firefly/ethconnect/internal/ethbind"
+	"github.com/hyperledger-firefly/ethconnect/internal/messages"
 	ethbinding "github.com/kaleido-io/ethbinding/pkg"
 	log "github.com/sirupsen/logrus"
 )

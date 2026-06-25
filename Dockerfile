@@ -1,4 +1,4 @@
-FROM golang:1.22-bullseye AS builder
+FROM golang:1.26.4-bookworm AS builder
 WORKDIR /ethconnect
 RUN apt-get update -y \
     && apt-get install -y build-essential git \
@@ -13,7 +13,7 @@ ADD . .
 RUN cp go.mod.new go.mod
 RUN make clean deps build
 
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 WORKDIR /ethconnect
 COPY --from=builder /ethconnect/ethconnect .
 COPY --from=builder /ethconnect/ethbinding.so .

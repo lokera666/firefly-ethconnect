@@ -25,9 +25,9 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/messages"
-	"github.com/hyperledger/firefly-ethconnect/internal/receipts"
-	"github.com/hyperledger/firefly-ethconnect/mocks/ethmocks"
+	"github.com/hyperledger-firefly/ethconnect/internal/messages"
+	"github.com/hyperledger-firefly/ethconnect/internal/receipts"
+	"github.com/hyperledger-firefly/ethconnect/mocks/ethmocks"
 	"github.com/julienschmidt/httprouter"
 	ethbinding "github.com/kaleido-io/ethbinding/pkg"
 	"github.com/stretchr/testify/assert"

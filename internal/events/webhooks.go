@@ -24,7 +24,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
 
 	log "github.com/sirupsen/logrus"
 )
@@ -120,7 +120,7 @@ func (w *webhookAction) validateURL() (*url.URL, *net.IPAddr, error) {
 	}
 	if w.es.isAddressUnsafe(addr) {
 		err := errors.Errorf(errors.EventStreamsWebhookProhibitedAddress, u.Hostname())
-		log.Errorf(err.Error())
+		log.Error(err.Error())
 		return nil, nil, err
 	}
 	return u, addr, nil

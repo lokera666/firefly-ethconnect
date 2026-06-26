@@ -24,11 +24,11 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
-	"github.com/hyperledger/firefly-ethconnect/internal/kafka"
-	"github.com/hyperledger/firefly-ethconnect/internal/receipts"
-	"github.com/hyperledger/firefly-ethconnect/internal/rest"
-	"github.com/hyperledger/firefly-ethconnect/internal/utils"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/kafka"
+	"github.com/hyperledger-firefly/ethconnect/internal/receipts"
+	"github.com/hyperledger-firefly/ethconnect/internal/rest"
+	"github.com/hyperledger-firefly/ethconnect/internal/utils"
 	"github.com/icza/dyno"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

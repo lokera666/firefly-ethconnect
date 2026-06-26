@@ -24,10 +24,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
-	"github.com/hyperledger/firefly-ethconnect/internal/ethbind"
-	"github.com/hyperledger/firefly-ethconnect/internal/messages"
-	"github.com/hyperledger/firefly-ethconnect/internal/utils"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/ethbind"
+	"github.com/hyperledger-firefly/ethconnect/internal/messages"
+	"github.com/hyperledger-firefly/ethconnect/internal/utils"
 	ethbinding "github.com/kaleido-io/ethbinding/pkg"
 
 	log "github.com/sirupsen/logrus"
@@ -177,7 +177,7 @@ func GetTransactionInfo(ctx context.Context, rpc RPCClient, txHash string) (*Txn
 }
 
 func addErrorToRetval(retval map[string]interface{}, retBytes []byte, rawRetval interface{}, err error) {
-	log.Warnf(err.Error())
+	log.Warn(err.Error())
 	retval["rlp"] = hex.EncodeToString(retBytes)
 	retval["raw"] = rawRetval
 	retval["error"] = err.Error()

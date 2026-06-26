@@ -18,7 +18,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
 	log "github.com/sirupsen/logrus"
 )
 

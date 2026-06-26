@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/kvstore"
-	"github.com/hyperledger/firefly-ethconnect/internal/utils"
+	"github.com/hyperledger-firefly/ethconnect/internal/kvstore"
+	"github.com/hyperledger-firefly/ethconnect/internal/utils"
 	"github.com/oklog/ulid/v2"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"

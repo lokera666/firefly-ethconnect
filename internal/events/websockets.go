@@ -15,7 +15,7 @@
 package events
 
 import (
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -24,12 +24,12 @@ import (
 
 	"net/http/httptest"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/auth"
-	"github.com/hyperledger/firefly-ethconnect/internal/auth/authtest"
-	"github.com/hyperledger/firefly-ethconnect/internal/ethbind"
-	"github.com/hyperledger/firefly-ethconnect/internal/messages"
-	"github.com/hyperledger/firefly-ethconnect/internal/receipts"
-	"github.com/hyperledger/firefly-ethconnect/internal/utils"
+	"github.com/hyperledger-firefly/ethconnect/internal/auth"
+	"github.com/hyperledger-firefly/ethconnect/internal/auth/authtest"
+	"github.com/hyperledger-firefly/ethconnect/internal/ethbind"
+	"github.com/hyperledger-firefly/ethconnect/internal/messages"
+	"github.com/hyperledger-firefly/ethconnect/internal/receipts"
+	"github.com/hyperledger-firefly/ethconnect/internal/utils"
 	"github.com/julienschmidt/httprouter"
 )
 

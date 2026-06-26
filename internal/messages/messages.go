@@ -18,7 +18,7 @@ import (
 	"encoding/json"
 	"reflect"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
 	ethbinding "github.com/kaleido-io/ethbinding/pkg"
 )
 

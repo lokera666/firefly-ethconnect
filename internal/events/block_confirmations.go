@@ -24,8 +24,8 @@ import (
 	"time"
 
 	lru "github.com/hashicorp/golang-lru"
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
-	"github.com/hyperledger/firefly-ethconnect/internal/eth"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/eth"
 	ethbinding "github.com/kaleido-io/ethbinding/pkg"
 	log "github.com/sirupsen/logrus"
 )

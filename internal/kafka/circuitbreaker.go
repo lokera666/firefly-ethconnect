@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
 	log "github.com/sirupsen/logrus"
 )
 

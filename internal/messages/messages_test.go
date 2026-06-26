@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/firefly-ethconnect/internal/errors"
+	"github.com/hyperledger-firefly/ethconnect/internal/errors"
 	"github.com/stretchr/testify/assert"
 )
 

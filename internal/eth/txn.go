@@ -177,7 +177,7 @@ func GetTransactionInfo(ctx context.Context, rpc RPCClient, txHash string) (*Txn
 }
 
 func addErrorToRetval(retval map[string]interface{}, retBytes []byte, rawRetval interface{}, err error) {
-	log.Warnf(err.Error())
+	log.Warn(err.Error())
 	retval["rlp"] = hex.EncodeToString(retBytes)
 	retval["raw"] = rawRetval
 	retval["error"] = err.Error()

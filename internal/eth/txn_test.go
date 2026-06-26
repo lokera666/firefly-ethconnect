@@ -626,7 +626,7 @@ func TestSendTxnABIParam(t *testing.T) {
 	tx, err := NewSendTxn(&msg, nil)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -679,7 +679,7 @@ func TestSendTxnInlineParam(t *testing.T) {
 	tx, err := NewSendTxn(&msg, nil)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -989,7 +989,7 @@ func TestSendTxnNodeAssignNonce(t *testing.T) {
 	tx, err := NewSendTxn(&msg, nil)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -1025,7 +1025,7 @@ func TestSendWithTXSignerContractOK(t *testing.T) {
 	tx, err := NewSendTxn(&msg, signer)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -1054,7 +1054,7 @@ func TestSendWithTXSignerOK(t *testing.T) {
 	tx, err := NewSendTxn(&msg, signer)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -1086,7 +1086,7 @@ func TestSendWithTXSignerFail(t *testing.T) {
 	tx, err := NewSendTxn(&msg, signer)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -1116,7 +1116,7 @@ func TestSendWithTXSignerFailPrivate(t *testing.T) {
 	tx, err := NewSendTxn(&msg, signer)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -1144,7 +1144,7 @@ func TestNewContractWithTXSignerOK(t *testing.T) {
 	tx, err := NewContractDeployTxn(&msg, signer)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -1171,7 +1171,7 @@ func TestNewNilTXSignerOK(t *testing.T) {
 	tx, err := NewNilTX("hd-u0abcd1234-u0bcde9876-12345", 12345, signer)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{}
 
@@ -1198,7 +1198,7 @@ func TestSendTxnRPFError(t *testing.T) {
 	tx, err := NewSendTxn(&msg, nil)
 	assert.Nil(err)
 	msgBytes, _ := json.Marshal(&msg)
-	log.Infof(string(msgBytes))
+	log.Info(string(msgBytes))
 
 	rpc := testRPCClient{
 		mockError: fmt.Errorf("pop"),

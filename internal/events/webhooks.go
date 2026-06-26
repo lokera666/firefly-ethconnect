@@ -120,7 +120,7 @@ func (w *webhookAction) validateURL() (*url.URL, *net.IPAddr, error) {
 	}
 	if w.es.isAddressUnsafe(addr) {
 		err := errors.Errorf(errors.EventStreamsWebhookProhibitedAddress, u.Hostname())
-		log.Errorf(err.Error())
+		log.Error(err.Error())
 		return nil, nil, err
 	}
 	return u, addr, nil

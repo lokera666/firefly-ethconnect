@@ -52,7 +52,7 @@ func (tx *Txn) calculateGas(ctx context.Context, rpc RPCClient, txArgs *SendTXAr
 	if err := rpc.CallContext(ctx, &gas, "eth_estimateGas", txArgs); err != nil {
 		// Now we attempt a call of the transaction, because that will return us a useful error in the case, of a revert.
 		estError := errors.Errorf(errors.TransactionSendGasEstimateFailed, err)
-		log.Errorf(estError.Error())
+		log.Error(estError.Error())
 		if _, reverted, err := tx.Call(ctx, rpc, "latest"); err != nil {
 			return reverted, err
 		}

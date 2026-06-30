@@ -1,4 +1,4 @@
-FROM golang:1.26.4-bookworm AS builder
+FROM golang:1.26-bookworm AS builder
 WORKDIR /ethconnect
 RUN apt-get update -y \
     && apt-get install -y build-essential git \

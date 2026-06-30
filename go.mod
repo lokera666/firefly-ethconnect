@@ -1,6 +1,6 @@
 module github.com/hyperledger-firefly/ethconnect
 
-go 1.26.4
+go 1.26.0
 
 require (
 	github.com/IBM/sarama v1.42.1

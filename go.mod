@@ -2,6 +2,8 @@ module github.com/hyperledger-firefly/ethconnect
 
 go 1.26.0
 
+toolchain go1.26.4
+
 require (
 	github.com/IBM/sarama v1.42.1
 	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751
